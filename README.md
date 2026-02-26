@@ -1,6 +1,5 @@
-# PredSwipe 🎯
-
-A Tinder-like React app for swiping on predictions across different market categories.
+# PredSwipe 
+A Tinder for prediction markets
 
 ## Features
 
