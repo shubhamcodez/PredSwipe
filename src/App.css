@@ -1,0 +1,157 @@
+/* Additional component-specific styles */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.login-form {
+  width: 100%;
+  max-width: 400px;
+}
+
+.logo {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+  background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.tagline {
+  text-align: center;
+  color: #636e72;
+  margin-bottom: 40px;
+  font-size: 1.1rem;
+}
+
+.swipe-container {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.prediction-stack {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  height: 500px;
+}
+
+.prediction-card.swiping {
+  transition: transform 0.3s ease;
+}
+
+.prediction-card.swipe-left {
+  transform: translateX(-100vw) rotate(-30deg);
+}
+
+.prediction-card.swipe-right {
+  transform: translateX(100vw) rotate(30deg);
+}
+
+.swipe-indicators {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 10;
+}
+
+.swipe-indicator {
+  font-size: 4rem;
+  font-weight: 900;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.swipe-indicator.show {
+  opacity: 0.8;
+}
+
+.swipe-indicator.yes {
+  color: #00b894;
+}
+
+.swipe-indicator.no {
+  color: #e17055;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  color: #636e72;
+}
+
+.empty-state h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #2d3436;
+}
+
+.empty-state p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  font-size: 1.2rem;
+  color: #636e72;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #667eea;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-right: 15px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 15px;
+  }
+  
+  .title {
+    font-size: 2rem;
+  }
+  
+  .prediction-question {
+    font-size: 1.5rem;
+  }
+  
+  .category-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .swipe-controls {
+    gap: 15px;
+  }
+  
+  .swipe-btn {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+  }
+}
