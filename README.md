@@ -1,5 +1,5 @@
 # PredSwipe 
-A Tinder for prediction markets
+Tinder for prediction markets - DegenMaxxing
 
 ## Features
 
